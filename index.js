@@ -5,7 +5,7 @@ const twilio = require('twilio');
 
 const VoiceResponse = twilio.twiml.VoiceResponse;
 
-const projectId = process.env.GCLOUD_PROJECT;
+const projectId = 'hacksc-266917';
 const region = 'us-central1';
 
 // Receiving a phone call
@@ -16,7 +16,8 @@ exports.handleCall = (req, res) => {
     }
 
     const recordingStatusCallbackUrl = `https://${region}-${projectId}.cloudfunctions.net/getRecording`;
-
+    console.log('recordingStatusCallback URL')
+    console.log(recordingStatusCallbackUrl)
     // Prepare a response to the voice call
     const response = new VoiceResponse();
 
@@ -52,11 +53,15 @@ function isValidRequest(req, res, pathname) {
 
     // Only validate that requests came from Twilio when the function has been
     // deployed to production.
-    if (process.env.NODE_ENV === 'production') {
-        isValid = twilio.validateExpressRequest(req, config.TWILIO_AUTH_TOKEN, {
-            url: `https://${region}-${projectId}.cloudfunctions.net/${pathname}`
-        });
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //     isValid = twilio.validateExpressRequest(req, config.TWILIO_AUTH_TOKEN, {
+    //         url: `https://${region}-${projectId}.cloudfunctions.net/${pathname}`
+    //     });
+    // }
+
+    isValid = twilio.validateExpressRequest(req, config.TWILIO_AUTH_TOKEN, {
+                url: `https://${region}-${projectId}.cloudfunctions.net/${pathname}`
+            });
 
     // Halt early if the request was not sent from Twilio
     if (!isValid) {
