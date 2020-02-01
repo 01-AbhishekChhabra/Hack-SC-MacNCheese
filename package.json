@@ -1,0 +1,30 @@
+{
+  "name": "hack-sc-macncheese",
+  "version": "1.0.0",
+  "description": "twilio gcp integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/01-AbhishekChhabra/Hack-SC-MacNCheese.git"
+  },
+  "keywords": [
+    "twilio",
+    "GCP"
+  ],
+  "author": "abhishek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/01-AbhishekChhabra/Hack-SC-MacNCheese/issues"
+  },
+  "homepage": "https://github.com/01-AbhishekChhabra/Hack-SC-MacNCheese#readme",
+  "dependencies": {
+    "@google-cloud/language": "^3.7.1",
+    "@google-cloud/speech": "^3.5.4",
+    "@google-cloud/storage": "^4.3.0",
+    "got": "^10.4.0",
+    "twilio": "^3.39.3"
+  }
+}
