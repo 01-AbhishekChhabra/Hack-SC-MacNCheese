@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Immigrant from './components/Immigrant'
+import Courts from './components/Courts'
+
 class App extends Component {
   state = {
     detentionCentres:[],
@@ -97,7 +99,9 @@ class App extends Component {
           />
 					<Route path='/:location' component={Immigrant}/>
           {/* <Route path='/map' component={LocationMap}/> */}
+          <Route path='/courts' component={Courts}/>
 
+          
         </div>
       </Router>
     );
