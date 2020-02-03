@@ -256,10 +256,9 @@ class Courts extends Component {
         }
     ],
     columns:[
-      'Addr1',
-      'Addr2',
-      'City',
-      'State',
+      'addr1',
+      'city',
+      'state',
       'zip'
     ]
   };
@@ -276,10 +275,12 @@ class Courts extends Component {
     return table
   }
   createHead = () => {
-    let head = []
-    for (let j = 0; j < this.state.columns.length; j++) {
-      head.push(<th scope = "col">{this.state.columns[j]}</th>)
-    }
+    let head = [
+      <th scope = "col">Street Address</th>,
+      <th scope = "col">City</th>,
+      <th scope = "col">State</th>,
+      <th scope = "col">ZIP Code</th>
+    ]
     return head
   }
 	render() {
