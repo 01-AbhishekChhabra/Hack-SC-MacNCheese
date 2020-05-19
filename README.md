@@ -15,10 +15,10 @@ To create a scalable solution to enable detained immigrants to efficiently conta
 
 ## To run the project
 
-Create a project in the GCP.
+Create a project in the GCP
 
-- For Cloud Function and Dialog Flow: 
-  - Use the cloudFunction/index.js file in the inline editor and create the intents in Dialog Flow Console.
+- For Cloud Function and Dialog Flow
+  - Use the cloudFunction/index.js file in the inline editor and create the intents in Dialog Flow Console
   - Integrate a Phone Gateway
 
 - For Firebase 
